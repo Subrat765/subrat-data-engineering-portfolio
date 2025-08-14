@@ -1,0 +1,43 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Real-time Data Pipeline",
+      "description": "Built a scalable real-time data pipeline using Apache Kafka, Apache Spark, and AWS services to process millions of events per day.",
+      "technologies": ["Python", "Apache Kafka", "Apache Spark", "AWS S3", "AWS Lambda", "PostgreSQL"],
+      "github": "https://github.com/Subrat765/realtime-data-pipeline",
+      "demo": "https://demo-pipeline.herokuapp.com",
+      "image": "/projects/pipeline.jpg",
+      "status": "completed",
+      "startDate": "2024-01-15",
+      "endDate": "2024-06-30",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "ETL Data Warehouse",
+      "description": "Designed and implemented a comprehensive ETL solution for a data warehouse using DBT, Airflow, and Snowflake to support business analytics.",
+      "technologies": ["Python", "Apache Airflow", "DBT", "Snowflake", "SQL", "Docker"],
+      "github": "https://github.com/Subrat765/etl-data-warehouse",
+      "demo": null,
+      "image": "/projects/warehouse.jpg",
+      "status": "completed",
+      "startDate": "2023-08-01",
+      "endDate": "2023-12-15",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "Analytics Dashboard",
+      "description": "Created an interactive analytics dashboard with real-time metrics visualization using React, D3.js, and FastAPI for data insights.",
+      "technologies": ["React", "TypeScript", "D3.js", "FastAPI", "Python", "Redis", "MongoDB"],
+      "github": "https://github.com/Subrat765/analytics-dashboard",
+      "demo": "https://analytics-dashboard-demo.vercel.app",
+      "image": "/projects/dashboard.jpg",
+      "status": "in-progress",
+      "startDate": "2024-07-01",
+      "endDate": null,
+      "featured": false
+    }
+  ]
+}
