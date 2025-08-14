@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f5e6ff" stroke="#b36bb3" stroke-width="2"/>
+  <text x="150" y="100" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="16" fill="#7a2f7a">
+    ML Segmentation
+  </text>
+  <text x="150" y="120" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12" fill="#a550a5">
+    Placeholder Image
+  </text>
+</svg>
