@@ -7,21 +7,27 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center">
         <div className="mr-4 flex">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
+          <Link className="mr-6 flex items-center space-x-2" href="/">
             <span className="inline-block font-bold">{siteConfig.name}</span>
           </Link>
           <nav className="flex items-center space-x-6 text-sm font-medium">
             <Link
-              href="/about"
+              href="/skills"
               className="transition-colors hover:text-foreground/80 text-foreground/60"
             >
-              About
+              Skills
             </Link>
             <Link
               href="/projects"
               className="transition-colors hover:text-foreground/80 text-foreground/60"
             >
               Projects
+            </Link>
+            <Link
+              href="/experience"
+              className="transition-colors hover:text-foreground/80 text-foreground/60"
+            >
+              Experience
             </Link>
             <Link
               href="/blog"
