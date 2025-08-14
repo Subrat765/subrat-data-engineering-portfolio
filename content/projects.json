@@ -2,42 +2,111 @@
   "projects": [
     {
       "id": 1,
-      "title": "Real-time Data Pipeline",
-      "description": "Built a scalable real-time data pipeline using Apache Kafka, Apache Spark, and AWS services to process millions of events per day.",
-      "technologies": ["Python", "Apache Kafka", "Apache Spark", "AWS S3", "AWS Lambda", "PostgreSQL"],
-      "github": "https://github.com/Subrat765/realtime-data-pipeline",
-      "demo": "https://demo-pipeline.herokuapp.com",
-      "image": "/projects/pipeline.jpg",
+      "title": "Real-time E-commerce Analytics Pipeline",
+      "description": "Built a comprehensive real-time data pipeline to process e-commerce transaction data using Apache Kafka, Apache Spark Streaming, and AWS services. Handles over 1M+ transactions per day with sub-second latency for real-time fraud detection and inventory management.",
+      "technologies": ["Python", "Apache Kafka", "Apache Spark", "AWS S3", "AWS Lambda", "AWS Kinesis", "PostgreSQL", "Redis", "Docker", "Kubernetes"],
+      "github": "https://github.com/Subrat765/ecommerce-realtime-pipeline",
+      "demo": "https://ecommerce-analytics-demo.vercel.app",
+      "image": "/projects/ecommerce-pipeline.jpg",
       "status": "completed",
       "startDate": "2024-01-15",
       "endDate": "2024-06-30",
-      "featured": true
+      "featured": true,
+      "highlights": [
+        "Reduced data processing latency by 75%",
+        "Implemented real-time fraud detection system",
+        "Achieved 99.9% uptime with automated failover"
+      ]
     },
     {
       "id": 2,
-      "title": "ETL Data Warehouse",
-      "description": "Designed and implemented a comprehensive ETL solution for a data warehouse using DBT, Airflow, and Snowflake to support business analytics.",
-      "technologies": ["Python", "Apache Airflow", "DBT", "Snowflake", "SQL", "Docker"],
-      "github": "https://github.com/Subrat765/etl-data-warehouse",
+      "title": "Multi-Cloud Data Warehouse Solution",
+      "description": "Designed and implemented a comprehensive ETL solution for a multi-cloud data warehouse architecture using DBT, Apache Airflow, and Snowflake. Integrated data from multiple sources including CRM, ERP, and social media platforms to support advanced business analytics and ML models.",
+      "technologies": ["Python", "Apache Airflow", "DBT", "Snowflake", "SQL", "Docker", "Terraform", "AWS", "Google Cloud", "Apache Spark"],
+      "github": "https://github.com/Subrat765/multicloud-data-warehouse",
       "demo": null,
-      "image": "/projects/warehouse.jpg",
+      "image": "/projects/data-warehouse.jpg",
       "status": "completed",
       "startDate": "2023-08-01",
-      "endDate": "2023-12-15",
-      "featured": true
+      "endDate": "2024-02-15",
+      "featured": true,
+      "highlights": [
+        "Integrated 15+ diverse data sources",
+        "Reduced data preparation time by 60%",
+        "Enabled self-service analytics for 200+ users"
+      ]
     },
     {
       "id": 3,
-      "title": "Analytics Dashboard",
-      "description": "Created an interactive analytics dashboard with real-time metrics visualization using React, D3.js, and FastAPI for data insights.",
-      "technologies": ["React", "TypeScript", "D3.js", "FastAPI", "Python", "Redis", "MongoDB"],
-      "github": "https://github.com/Subrat765/analytics-dashboard",
-      "demo": "https://analytics-dashboard-demo.vercel.app",
-      "image": "/projects/dashboard.jpg",
+      "title": "ML-Powered Customer Segmentation Platform",
+      "description": "Developed a comprehensive customer segmentation platform using machine learning algorithms and big data technologies. Built scalable data pipelines to process customer behavior data and generate actionable insights for marketing teams using advanced clustering and predictive modeling.",
+      "technologies": ["Python", "Scikit-learn", "Apache Spark MLlib", "Jupyter", "FastAPI", "PostgreSQL", "React", "Plotly", "Docker"],
+      "github": "https://github.com/Subrat765/customer-segmentation-ml",
+      "demo": "https://customer-segments-demo.herokuapp.com",
+      "image": "/projects/ml-segmentation.jpg",
+      "status": "completed",
+      "startDate": "2023-10-01",
+      "endDate": "2024-01-30",
+      "featured": true,
+      "highlights": [
+        "Improved marketing ROI by 35%",
+        "Automated customer profiling for 500K+ users",
+        "Reduced manual analysis time by 80%"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Streaming IoT Data Processing System",
+      "description": "Built a robust IoT data processing system to handle sensor data from industrial equipment. Implemented real-time anomaly detection and predictive maintenance using Apache Kafka, InfluxDB, and custom machine learning models to minimize equipment downtime.",
+      "technologies": ["Python", "Apache Kafka", "InfluxDB", "Grafana", "TensorFlow", "Docker", "Kubernetes", "MQTT", "TimescaleDB"],
+      "github": "https://github.com/Subrat765/iot-streaming-platform",
+      "demo": "https://iot-monitoring-dashboard.netlify.app",
+      "image": "/projects/iot-streaming.jpg",
+      "status": "completed",
+      "startDate": "2023-05-15",
+      "endDate": "2023-09-30",
+      "featured": false,
+      "highlights": [
+        "Reduced equipment downtime by 45%",
+        "Processed 100M+ sensor readings daily",
+        "Achieved 99.5% anomaly detection accuracy"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Financial Data Lake & Analytics Platform",
+      "description": "Architected and implemented a comprehensive financial data lake solution for regulatory reporting and risk management. Built automated data quality checks, lineage tracking, and compliance reporting using modern data stack technologies.",
+      "technologies": ["Python", "Apache Spark", "AWS S3", "AWS Glue", "Apache Hudi", "Great Expectations", "Tableau", "dbt", "Apache Airflow"],
+      "github": "https://github.com/Subrat765/financial-data-lake",
+      "demo": null,
+      "image": "/projects/financial-lake.jpg",
+      "status": "completed",
+      "startDate": "2024-03-01",
+      "endDate": "2024-08-15",
+      "featured": false,
+      "highlights": [
+        "Automated 95% of regulatory reporting",
+        "Reduced compliance costs by $2M annually",
+        "Implemented comprehensive data governance"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Modern Data Stack Migration",
+      "description": "Led the migration of a legacy data infrastructure to a modern cloud-native data stack. Migrated from on-premises Oracle and ETL tools to cloud-based solutions including Snowflake, Fivetran, and dbt, improving performance and reducing costs significantly.",
+      "technologies": ["Snowflake", "Fivetran", "dbt", "Looker", "Python", "SQL", "Terraform", "CI/CD", "GitHub Actions"],
+      "github": "https://github.com/Subrat765/modern-data-stack-migration",
+      "demo": null,
+      "image": "/projects/data-migration.jpg",
       "status": "in-progress",
-      "startDate": "2024-07-01",
+      "startDate": "2024-09-01",
       "endDate": null,
-      "featured": false
+      "featured": false,
+      "highlights": [
+        "Reduced infrastructure costs by 40%",
+        "Improved query performance by 10x",
+        "Enabled citizen data science capabilities"
+      ]
     }
   ]
 }
