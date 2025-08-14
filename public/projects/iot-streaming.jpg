@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#fff5e6" stroke="#ff9933" stroke-width="2"/>
+  <text x="150" y="100" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="16" fill="#cc6600">
+    IoT Streaming
+  </text>
+  <text x="150" y="120" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12" fill="#e67300">
+    Placeholder Image
+  </text>
+</svg>
