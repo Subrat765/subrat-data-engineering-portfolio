@@ -1,0 +1,28 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="100" fill="#1F2937"/>
+  <circle cx="100" cy="100" r="95" stroke="#6B7280" stroke-width="4" fill="none"/>
+  
+  <!-- Profile circle background -->
+  <circle cx="100" cy="80" r="35" fill="#4B5563"/>
+  
+  <!-- Initial S -->
+  <text x="100" y="95" text-anchor="middle" fill="#E5E7EB" font-family="sans-serif" font-size="28" font-weight="bold">S</text>
+  
+  <!-- Body shape -->
+  <path d="M50 160 Q50 140 70 140 L130 140 Q150 140 150 160 L150 190 L50 190 Z" fill="#4B5563"/>
+  
+  <!-- Data-related icons -->
+  <!-- Database icon -->
+  <rect x="75" y="170" width="10" height="15" rx="2" fill="#3B82F6"/>
+  <rect x="77" y="172" width="6" height="2" fill="#1F2937"/>
+  <rect x="77" y="175" width="6" height="2" fill="#1F2937"/>
+  <rect x="77" y="178" width="6" height="2" fill="#1F2937"/>
+  
+  <!-- Chart icon -->
+  <rect x="90" y="175" width="3" height="10" fill="#10B981"/>
+  <rect x="95" y="170" width="3" height="15" fill="#10B981"/>
+  <rect x="100" y="172" width="3" height="13" fill="#10B981"/>
+  
+  <!-- Code brackets -->
+  <text x="115" y="180" fill="#F59E0B" font-family="monospace" font-size="12" font-weight="bold">&lt;/&gt;</text>
+</svg>
