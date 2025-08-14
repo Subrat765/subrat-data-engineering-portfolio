@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { getAllPosts } from '@/lib/mdx'
 
 export const metadata: Metadata = {
   title: 'Blog',
@@ -8,7 +7,27 @@ export const metadata: Metadata = {
 }
 
 export default async function BlogPage() {
-  const posts = await getAllPosts()
+  // Import server-only modules inside the function to ensure server-side execution
+  const { readdir } = await import('fs/promises')
+  const { join } = await import('path')
+  
+  let posts: any[] = []
+  
+  try {
+    // Dynamically list MDX posts from /content/posts
+    const postsDirectory = join(process.cwd(), 'content/posts')
+    const files = await readdir(postsDirectory)
+    const mdxFiles = files.filter(file => file.endsWith('.mdx'))
+    
+    if (mdxFiles.length > 0) {
+      // Only import mdx utility if files exist to avoid build issues
+      const { getAllPosts } = await import('@/lib/mdx')
+      posts = await getAllPosts()
+    }
+  } catch (error) {
+    // Handle case where posts directory doesn't exist or is empty
+    console.log('No posts directory found or error reading posts:', error)
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -20,7 +39,7 @@ export default async function BlogPage() {
           <p className="text-xl text-gray-300 text-center mb-16 max-w-3xl mx-auto">
             Sharing insights on data engineering, machine learning, and the latest technology trends.
           </p>
-
+          
           {posts.length === 0 ? (
             <div className="text-center py-16">
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-12 border border-white/20">
@@ -50,32 +69,32 @@ export default async function BlogPage() {
                           href={`/blog/${post.slug}`}
                           className="hover:text-purple-300 transition-colors duration-300"
                         >
-                          {post.frontmatter.title}
+                          {post.title}
                         </Link>
                       </h2>
                       
                       <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
-                        <time dateTime={post.frontmatter.date}>
-                          {new Date(post.frontmatter.date).toLocaleDateString('en-US', {
+                        <time dateTime={post.date}>
+                          {new Date(post.date).toLocaleDateString('en-US', {
                             year: 'numeric',
                             month: 'long',
                             day: 'numeric'
                           })}
                         </time>
-                        {post.frontmatter.readTime && (
-                          <span>• {post.frontmatter.readTime} min read</span>
+                        {post.readTime && (
+                          <span>• {post.readTime} min read</span>
                         )}
                       </div>
-
-                      {post.frontmatter.excerpt && (
+                      
+                      {post.excerpt && (
                         <p className="text-gray-300 mb-6 leading-relaxed">
-                          {post.frontmatter.excerpt}
+                          {post.excerpt}
                         </p>
                       )}
-
-                      {post.frontmatter.tags && (
+                      
+                      {post.tags && (
                         <div className="flex flex-wrap gap-2 mb-6">
-                          {post.frontmatter.tags.map((tag: string) => (
+                          {post.tags.map((tag: string) => (
                             <span
                               key={tag}
                               className="bg-purple-600/30 text-purple-200 px-3 py-1 rounded-full text-sm border border-purple-400/30"
@@ -85,7 +104,7 @@ export default async function BlogPage() {
                           ))}
                         </div>
                       )}
-
+                      
                       <Link
                         href={`/blog/${post.slug}`}
                         className="inline-flex items-center gap-2 text-purple-300 hover:text-purple-200 transition-colors duration-300 group"
@@ -111,7 +130,7 @@ export default async function BlogPage() {
               ))}
             </div>
           )}
-
+          
           {/* Newsletter Signup Section */}
           <div className="mt-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 text-center">
